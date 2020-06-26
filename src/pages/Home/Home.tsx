@@ -8,6 +8,12 @@ import Paginator from '../../components/Paginator/Paginator'
 
 import './Home.css'
 
+interface QueryParams {
+  offset: number,
+  limit: number,
+  nameStartsWith: string|null
+}
+
 const Home = () => {
   const limit = 10
 
@@ -17,12 +23,12 @@ const Home = () => {
   const [total, setTotal] = useState(0)
 
   useEffect(() => {
-    api.get('characters', {
-      params: {
-        offset: `${offset}`,
-        limit: `${limit}`,
-      }
-    }).then((response) => {
+    const params = { offset, limit } as QueryParams
+    if (searchState.length > 0) {
+      params.nameStartsWith = searchState
+    }
+
+    api.get('characters', { params }).then((response) => {
       const { data } = response.data
       const newItems = data.results.map((result: any) => {
         const {
@@ -38,10 +44,10 @@ const Home = () => {
         }
       })
       setItems(newItems)
-      setOffset(data.offset)
+      setOffset(data.count > 0 ? data.offset : 0)
       setTotal(data.total)
     })
-  }, [offset])
+  }, [offset, searchState])
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value
@@ -58,6 +64,7 @@ const Home = () => {
         <div className="main-container">
           <h1>Busca de personagens</h1>
           <Search
+            help="API says: [nameStartsWith] Return characters with names that begin with the specified string (e.g. Sp)."
             value={searchState}
             onChange={handleSearch}
           />
