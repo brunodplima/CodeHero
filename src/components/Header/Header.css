@@ -1,0 +1,18 @@
+#app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 21px 24px;
+}
+
+#app-header .logo img {
+  height: 24px;
+}
+
+#app-header .user-info .user-name {
+  font-weight: bold;
+}
+
+#app-header .user-info span:not(:last-child) {
+  margin-right: 5px;
+}

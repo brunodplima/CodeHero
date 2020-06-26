@@ -1,0 +1,29 @@
+#search-field {
+  /* display: flex;
+  flex-direction: column; */
+  margin-top: 16px;
+}
+
+#search-field label {
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#search-field input {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  display: block;
+  padding: 16px;
+  margin: 10px 0;
+  height: 32px;
+  width: 295px;
+}
+
+#search-field input::placeholder {
+  color: #8E8E8E;
+  font-style: italic;
+
+}
