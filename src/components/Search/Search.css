@@ -50,3 +50,15 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+  #search-field {
+    text-align: center;
+  }
+  #search-field .input-container {
+    width: 100%;
+  }
+  #search-field .input-container input {
+    max-width: 100%;
+  }
+}

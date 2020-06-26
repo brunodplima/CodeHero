@@ -29,3 +29,13 @@
   cursor: default;
   pointer-events: none;
 }
+
+@media screen and (max-width: 600px) {
+  .paginator {
+    width: 100%;
+    margin: 22px auto 25px;
+  }
+  .paginator button {
+    margin: auto 4px;
+  }
+}

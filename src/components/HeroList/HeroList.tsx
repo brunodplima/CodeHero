@@ -15,9 +15,9 @@ const HeroList: React.FC<HeroListProps> = (props) => {
   return (
     <div id="hero-list">
       <div className="hero-list-header">
-        <div className="column"> Personagem </div>
-        <div className="column"> Séries </div>
-        <div className="column"> Eventos </div>
+        <div className="column column-padding-left-small"> Personagem </div>
+        <div className="column hide-small"> Séries </div>
+        <div className="column hide-small"> Eventos </div>
       </div>
       {
         list.map((hero) => (

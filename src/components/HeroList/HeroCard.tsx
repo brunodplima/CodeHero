@@ -10,10 +10,12 @@ const HeroCard: React.FC<HeroCardProps> = (props) => {
   return (
     <div className="hero-card">
       <div className="column hero-profile">
-        <img src={picture} alt="Hero" />
+        <div className="img-wrapper">
+          <img src={picture} alt="Hero" />
+        </div>
         <strong>{name}</strong>
       </div>
-      <div className="column">
+      <div className="column hide-small">
         {
           series.map((serie: string, index) => (
             // eslint-disable-next-line react/no-array-index-key
@@ -21,7 +23,7 @@ const HeroCard: React.FC<HeroCardProps> = (props) => {
           ))
         }
       </div>
-      <div className="column">
+      <div className="column hide-small">
         {
           events.map((event: string, index) => (
             // eslint-disable-next-line react/no-array-index-key

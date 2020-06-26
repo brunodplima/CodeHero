@@ -26,3 +26,9 @@ h1 {
 .app-content {
   width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  .hide-small {
+    display: none;
+  }
+}

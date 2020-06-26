@@ -10,8 +10,10 @@ const Header = () => (
       <img src={logo} alt="Objective" />
     </div>
     <div className="user-info">
-      <span className="user-name">Bruno Lima</span>
-      <span className="user-project">Teste de Front-end</span>
+      <div className="user-text">
+        <span className="user-name">Bruno Lima</span>
+        <span className="user-project">Teste de Front-end</span>
+      </div>
       <span className="user-initials">(BL)</span>
     </div>
   </header>

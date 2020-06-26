@@ -17,7 +17,33 @@
   align-items: center;
 }
 
-.hero-card .hero-profile img {
+.hero-card .hero-profile .img-wrapper {
   margin-right: 24px;
+  width: 48px;
   height: 48px;
+  max-height: 48px;
+  max-width: 48px;
+}
+
+.hero-card .hero-profile .img-wrapper img {
+  width: 48px;
+  height: 48px;
+  max-height: 48px;
+  max-width: 48px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-card {
+    height: 72px;
+    padding: 12px;
+  }
+
+  .hero-card .hero-profile {
+    width: 100%;
+  }
+
+  .hero-card .hero-profile .img-wrapper {
+    margin: 0 20px 0 4px;
+  }
 }
