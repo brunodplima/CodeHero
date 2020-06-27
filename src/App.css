@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #E5E5E5;
+  background: white;
   -webkit-font-smoothing: antialiased;
   color: var(--text-color);
 }
@@ -25,7 +25,4 @@ h1 {
 
 .app-content {
   width: 100%;
-  max-width: 1140px;
-  margin: auto;
-  padding: 40px;
 }

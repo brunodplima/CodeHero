@@ -1,0 +1,9 @@
+#app-home .main-container-wrapper {
+  background: #E5E5E5;
+}
+
+#app-home .main-container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 40px;
+}

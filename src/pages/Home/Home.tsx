@@ -4,14 +4,27 @@ import { HeroCardProps } from '../../components/HeroList/types'
 
 import Search from '../../components/Search/Search'
 import HeroList from '../../components/HeroList/HeroList'
+import Paginator from '../../components/Paginator/Paginator'
+
+import './Home.css'
 
 const Home = () => {
+  const limit = 10
+
   const [searchState, setSearchState] = useState('')
   const [items, setItems] = useState<HeroCardProps[]>([])
+  const [offset, setOffset] = useState(0)
+  const [total, setTotal] = useState(0)
 
   useEffect(() => {
-    api.get('').then((response) => {
-      const newItems = response.data.data.results.map((result: any) => {
+    api.get('characters', {
+      params: {
+        offset: `${offset}`,
+        limit: `${limit}`,
+      }
+    }).then((response) => {
+      const { data } = response.data
+      const newItems = data.results.map((result: any) => {
         const {
           id, name, series, events
         } = result
@@ -25,24 +38,45 @@ const Home = () => {
         }
       })
       setItems(newItems)
+      setOffset(data.offset)
+      setTotal(data.total)
     })
-  }, [])
+  }, [offset])
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value
     setSearchState(term)
   }
 
+  const handlePageChange = (page: number) => {
+    setOffset((page - 1) * limit)
+  }
+
   return (
-    <div className="app-home">
-      <h1>Busca de personagens</h1>
-      <Search
-        value={searchState}
-        onChange={handleSearch}
-      />
-      <HeroList
-        list={items}
-      />
+    <div id="app-home">
+      <div className="main-container-wrapper">
+        <div className="main-container">
+          <h1>Busca de personagens</h1>
+          <Search
+            value={searchState}
+            onChange={handleSearch}
+          />
+          <HeroList
+            list={items}
+          />
+        </div>
+      </div>
+      {
+        total > 0
+        && (
+        <Paginator
+          offset={offset}
+          limit={limit}
+          total={total}
+          onClickCallback={handlePageChange}
+        />
+        )
+      }
     </div>
   )
 }
