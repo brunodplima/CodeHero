@@ -1,0 +1,21 @@
+#app-home .main-container-wrapper {
+  background: #E5E5E5;
+}
+
+#app-home .main-container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  #app-home .main-container {
+    margin: auto;
+    padding: 24px;
+  }
+  #app-home .main-container h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}

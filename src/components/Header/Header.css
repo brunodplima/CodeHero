@@ -1,0 +1,49 @@
+#app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  background-color: white;
+  padding: 21px 24px;
+}
+
+#app-header .logo img {
+  height: 24px;
+}
+
+#app-header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+#app-header .user-info .user-name {
+  font-weight: bold;
+}
+
+#app-header .user-info .user-initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 16px;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#app-header .user-info span:not(:last-child) {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  #app-header .user-info {
+    justify-content: space-between;
+  }
+  #app-header .user-info .user-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}

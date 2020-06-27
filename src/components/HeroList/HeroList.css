@@ -1,0 +1,20 @@
+#hero-list {
+  margin-top: 40px;
+}
+
+#hero-list .hero-list-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 9px;
+  font-size: 12px;
+}
+
+#hero-list .hero-list-header .column {
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  #hero-list .hero-list-header .column.column-padding-left-small {
+    padding-left: 64px;
+  }
+}

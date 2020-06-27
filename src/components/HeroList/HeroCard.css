@@ -1,0 +1,49 @@
+.hero-card {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 5px #00000033;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;;
+}
+
+.hero-card .column {
+  width: 30%;
+}
+
+.hero-card .hero-profile {
+  display: flex;
+  align-items: center;
+}
+
+.hero-card .hero-profile .img-wrapper {
+  margin-right: 24px;
+  width: 48px;
+  height: 48px;
+  max-height: 48px;
+  max-width: 48px;
+}
+
+.hero-card .hero-profile .img-wrapper img {
+  width: 48px;
+  height: 48px;
+  max-height: 48px;
+  max-width: 48px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-card {
+    height: 72px;
+    padding: 12px;
+  }
+
+  .hero-card .hero-profile {
+    width: 100%;
+  }
+
+  .hero-card .hero-profile .img-wrapper {
+    margin: 0 20px 0 4px;
+  }
+}
