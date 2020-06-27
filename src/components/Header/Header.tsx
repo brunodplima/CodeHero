@@ -14,7 +14,7 @@ const Header = () => (
         <span className="user-name">Bruno Lima</span>
         <span className="user-project">Teste de Front-end</span>
       </div>
-      <span className="user-initials">(BL)</span>
+      <span className="user-initials">BL</span>
     </div>
   </header>
 )
