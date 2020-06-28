@@ -4,4 +4,5 @@ export interface HeroCardProps {
   name: string,
   series: Array<string>,
   events: Array<string>,
+  // onClick: () => void,
 }
