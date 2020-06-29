@@ -1,44 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Code Hero
 
-## Available Scripts
+Web project that, in a simple way, exemplifies the use of JavaScript, with React, in accessing [Marvel Comics API](https://developer.marvel.com/).
 
-In the project directory, you can run:
+Two screens were developed. The first one lists all the characters, as well as Series and Events in which they participated. The second presents in a more detailed view a specific character. 
 
-### `yarn start`
+- ### Desktop
+![Home](assets/desktop_home.png)
+![Details](assets/desktop_details.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- ### Mobile
+![Home](assets/mobile_home.png)
+![Details](assets/mobile_details.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Technologies
+- [Node.js](https://nodejs.org/en/])
+- [Yarn](https://classic.yarnpkg.com/en/)
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
 
-### `yarn test`
+### Node.js
+To use Node.js, you can perform an installation through a package manager, or another options, such as [Docker](https://www.docker.com/). Please, refer to the [_downloads_ page](https://nodejs.org/en/download/) of the official _site_ and follow the instructions. 
+### Yarn
+Yarn is a fast, reliable and secure dependency manager, as described in its homepage. In the development of this project it was used to replace `npm`. It is recommended to review the [installation page](https://classic.yarnpkg.com/en/docs/install) to choose the most appropriate way to obtain and use it. 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
+Copy the `.env` file and save it as `.env.local`. Then, fill in the environment variables to access the API, namely `REACT_APP_PUBLIC_KEY` and` REACT_APP_PRIVATE_KEY`.
 
-### `yarn build`
+Finally, run the command below to install the project's dependencies: 
+```bash
+yarn
+``` 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running
+To run the app in development mode, run the following command:
+```bash
+yarn start
+```
+Open http://localhost:3000 to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Production
+To generate a production build, the following command must be used:
+```bash
+yarn build
+```
+It bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
